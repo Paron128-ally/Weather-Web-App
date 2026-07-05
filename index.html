@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+          <h1 class="brand">Mausam</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Search city" value="Mumbai">
+            <button type="button" onclick="getWeather()"><img src="./images/search.png" alt="search"></button>
+        </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Info</a>
+                <a href="#">Help</a>
+            </div>
+        </nav>
+    </header>
+    
+    <p id="error-message" class="error"></p>
+
+    <main>
+        <div id="loader" class="loader hidden" aria-live="polite" aria-label="Loading weather">
+            <div class="loader-spinner" aria-hidden="true"></div>
+        </div>
+        <div id="main-content">
+            <div class="container">
+                <div class="weather-container" id="weather-info">
+                    <img id="weather-icon" class="weather-icon" src="" alt="Weather icon">
+                    <div class="weather-info">
+                        <h2 id="city-name">-</h2>
+                        <p id="temperature">-</p>
+                        <p id="description">-</p>
+                    </div>
+                </div>
+                <div class="forecast-container">
+                    <h3 class="forecast-title">Forecast</h3>
+                    <div class="forecast-cards" id="forecast-cards"></div>
+                </div>
+            </div>
+            <div class="additional-info">
+                <h3>Additional-Info:</h3>
+                <div class="feels-like">Feels : <span id="feels-like-value"></span></div>
+                <div class="visibility">Visible : <span id="visibility-value"></span></div>
+                <div class="sunrise">Sunrise : <span id="sunrise-value"></span></div>
+                <div class="sunset">Sunset : <span id="sunset-inline"></span></div>
+                <div class="humidity">Humidity : <span id="humidity-value"></span></div>
+                <div class="wind-speed">Wind : <span id="wind-speed-value"></span></div>
+                <div class="uv">UV Index : <span id="uv-value"></span></div>
+                <div class="pressure">Pressure: <span id="pressure-value"></span></div>
+                <div class="aqi">Air Quality : <span id="aqi-value"></span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <address class="contact-info">
+            <p class="creation">By Paarth Sukhija | paarth.sukhija@gmail.com | Data: <a href="https://openweathermap.org/api" target="_blank" id="data">OpenWeatherMap</a></p>
+        </address>
+    </footer>
+
+    <script src="./static/wow.js"></script>
+</body>
+</html>
