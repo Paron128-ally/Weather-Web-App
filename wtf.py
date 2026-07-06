@@ -23,7 +23,7 @@ UVI_URL = "https://api.openweathermap.org/data/2.5/uvi"
 
 
 def get_api_key():
-    return os.environ.get("OPENWEATHER_API_KEY", "0ef7a4cd6d27bfa0eb32a6d7a7fe663e").strip()
+    return os.environ.get("OPENWEATHER_API_KEY", "your_api_key").strip()
 
 
 @app.route("/")
